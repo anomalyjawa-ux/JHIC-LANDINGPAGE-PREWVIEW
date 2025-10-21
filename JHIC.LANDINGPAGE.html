@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website - SMK KRIAN 1 SIDOARJO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar-wrapper" id="navbar">
+        <header class="navbar">
+<!-- Logo -->
+<div class="logo">
+  <img src="assets-landing-page/logo.png" alt="Logo" class="logo-img">
+  <div class="logo-text">
+    <span class="yayasan">Yayasan Pembangunan Pendidikan</span>
+    <h1>SMK KRIAN 1</h1>
+    <h2>SIDOARJO</h2>
+  </div>
+</div>
+
+
+
+            <!-- Desktop Nav Items -->
+            <div class="nav-items">
+                <!-- Informasi -->
+                <div class="nav-item">
+                    Informasi <i class="fas fa-chevron-down"></i>
+                    <ul class="dropdown">
+                        <ul class="dropdown-inner">
+                            <li><a href="#">Pengumuman</a></li>
+                            <li><a href="#">Jadwal</a></li>
+                            <li><a href="#">Arsip</a></li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <!-- Kesiswaan -->
+                <div class="nav-item">
+                    Kesiswaan <i class="fas fa-chevron-down"></i>
+                    <ul class="dropdown">
+                        <ul class="dropdown-inner">
+                            <li><a href="#">OSIS</a></li>
+                            <li><a href="#">Ekstrakurikuler</a></li>
+                            <li><a href="#">Prestasi</a></li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <!-- Tentang -->
+                <div class="nav-item">
+                    Tentang <i class="fas fa-chevron-down"></i>
+                    <ul class="dropdown">
+                        <ul class="dropdown-inner">
+                            <li><a href="#">Profil</a></li>
+                            <li><a href="#">Visi Misi</a></li>
+                            <li><a href="#">Sejarah</a></li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <!-- Program -->
+                <div class="nav-item">
+                    Program <i class="fas fa-chevron-down"></i>
+                    <ul class="dropdown">
+                        <ul class="dropdown-inner">
+                            <li><a href="#">Akademik</a></li>
+                            <li><a href="#">Non-Akademik</a></li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <!-- Kontak -->
+                <div class="nav-item">
+                    Kontak <i class="fas fa-chevron-down"></i>
+                    <ul class="dropdown">
+                        <ul class="dropdown-inner">
+                            <li><a href="#">Hubungi Kami</a></li>
+                            <li><a href="#">Lokasi</a></li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <!-- Blog -->
+                <div class="nav-item">
+                    Blog <i class="fas fa-chevron-down"></i>
+                    <ul class="dropdown">
+                        <ul class="dropdown-inner">
+                            <li><a href="#">Artikel</a></li>
+                            <li><a href="#">Berita</a></li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <!-- Alumni -->
+                <div class="nav-item">
+                    Alumni <i class="fas fa-chevron-down"></i>
+                    <ul class="dropdown">
+                        <ul class="dropdown-inner">
+                            <li><a href="#">Data Alumni</a></li>
+                            <li><a href="#">Testimoni</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- User Icon - Desktop Only -->
+            <a class="user-icon">
+                <i class="fas fa-user"></i>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </header>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="toggleMobileMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- User Info - Prominent at Top -->
+            <div class="mobile-user-info" onclick="handleUserClick()">
+                <div class="user-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div>
+                    <div class="user-label">Hi, Femas</div>
+                    <div class="user-subtitle">Tap untuk profil</div>
+                </div>
+            </div>
+
+            <!-- Informasi -->
+            <div class="mobile-nav-section">
+                <div class="mobile-nav-item" onclick="toggleSubmenu(this)">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Informasi</span>
+                    <i class="fas fa-chevron-down chevron"></i>
+                </div>
+                <div class="mobile-nav-submenu">
+                    <a class="mobile-nav-sub" href="#">Pengumuman</a>
+                    <a class="mobile-nav-sub" href="#">Jadwal</a>
+                    <a class="mobile-nav-sub" href="#">Arsip</a>
+                </div>
+            </div>
+
+            <!-- Kesiswaan -->
+            <div class="mobile-nav-section">
+                <div class="mobile-nav-item" onclick="toggleSubmenu(this)">
+                    <i class="fas fa-user-friends"></i>
+                    <span>Kesiswaan</span>
+                    <i class="fas fa-chevron-down chevron"></i>
+                </div>
+                <div class="mobile-nav-submenu">
+                    <a class="mobile-nav-sub" href="#">OSIS</a>
+                    <a class="mobile-nav-sub" href="#">Ekstrakurikuler</a>
+                    <a class="mobile-nav-sub" href="#">Prestasi</a>
+                </div>
+            </div>
+
+            <!-- Tentang -->
+            <div class="mobile-nav-section">
+                <div class="mobile-nav-item" onclick="toggleSubmenu(this)">
+                    <i class="fas fa-university"></i>
+                    <span>Tentang</span>
+                    <i class="fas fa-chevron-down chevron"></i>
+                </div>
+                <div class="mobile-nav-submenu">
+                    <a class="mobile-nav-sub" href="#">Profil</a>
+                    <a class="mobile-nav-sub" href="#">Visi Misi</a>
+                    <a class="mobile-nav-sub" href="#">Sejarah</a>
+                </div>
+            </div>
+
+            <!-- Program -->
+            <div class="mobile-nav-section">
+                <div class="mobile-nav-item" onclick="toggleSubmenu(this)">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Program</span>
+                    <i class="fas fa-chevron-down chevron"></i>
+                </div>
+                <div class="mobile-nav-submenu">
+                    <a class="mobile-nav-sub" href="#">Akademik</a>
+                    <a class="mobile-nav-sub" href="#">Non-Akademik</a>
+                </div>
+            </div>
+
+            <!-- Kontak -->
+            <div class="mobile-nav-section">
+                <div class="mobile-nav-item" onclick="toggleSubmenu(this)">
+                    <i class="fas fa-envelope"></i>
+                    <span>Kontak</span>
+                    <i class="fas fa-chevron-down chevron"></i>
+                </div>
+                <div class="mobile-nav-submenu">
+                    <a class="mobile-nav-sub" href="#">Hubungi Kami</a>
+                    <a class="mobile-nav-sub" href="#">Lokasi</a>
+                </div>
+            </div>
+
+            <!-- Blog -->
+            <div class="mobile-nav-section">
+                <div class="mobile-nav-item" onclick="toggleSubmenu(this)">
+                    <i class="fas fa-blog"></i>
+                    <span>Blog</span>
+                    <i class="fas fa-chevron-down chevron"></i>
+                </div>
+                <div class="mobile-nav-submenu">
+                    <a class="mobile-nav-sub" href="#">Artikel</a>
+                    <a class="mobile-nav-sub" href="#">Berita</a>
+                </div>
+            </div>
+
+            <!-- Alumni -->
+            <div class="mobile-nav-section">
+                <div class="mobile-nav-item" onclick="toggleSubmenu(this)">
+                    <i class="fas fa-users"></i>
+                    <span>Alumni</span>
+                    <i class="fas fa-chevron-down chevron"></i>
+                </div>
+                <div class="mobile-nav-submenu">
+                    <a class="mobile-nav-sub" href="#">Data Alumni</a>
+                    <a class="mobile-nav-sub" href="#">Testimoni</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+     <section>
+    <div class="main-container">
+        <div class="demo-content">
+            <img src="assets-landing-page/poster.png" alt="">
+    </div>
+    </section>
+
+    <!-- MAIN 2 CONTENT -->
+<section class="kepsek-section">
+  <!-- Statistik kiri -->
+  <div class="stats-col">
+    <div class="stat-card">
+      <img src="assets-landing-page/counter-04 1.png" alt="">
+      <h2>2,501+</h2>
+      <p>Siswa Aktif</p>
+    </div>
+    <div class="stat-card">
+      <img src="assets-landing-page/counter-02 1.png" alt="">
+      <h2>5+</h2>
+      <p>Jurusan & Ekstra Kulikuler</p>
+    </div>
+  </div>
+
+  <!-- Foto Kepsek -->
+  <div class="kepsek-wrapper">
+    <img src="shape-02.png" alt="" class="shape-bg">
+    <img src="assets-landing-page/kepsek.png" alt="Kepala Sekolah" class="kepsek-img">
+    <div class="kepsek-info">
+      <h3>Dini Mekarsari S.Pd M.Pd</h3>
+      <p>Kepala Sekolah SMK Krian 1 Sidoarjo</p>
+    </div>
+  </div>
+
+  <!-- Statistik kanan -->
+  <div class="stats-col">
+    <div class="stat-card">
+      <img src="assets-landing-page/counter-03 1 (1).png" alt="">
+      <h2>520+</h2>
+      <p>Peraih Prestasi</p>
+    </div>
+    <div class="stat-card">
+      <img src="assets-landing-page/counter-01 1.png" alt="">
+      <h2>25,000+</h2>
+      <p>Alumni Berkompetensi</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Banner Sponsor -->
+<section class="banner-section">
+  <div class="banner-wrapper">
+    <img src="assets-landing-page/Benner3.png" alt="Banner Sponsor SMK Krian 1">
+  </div>
+</section>
+
+
+<!-- SECTION FITUR -->
+<section class="fitur-section">
+  <div class="fitur-card">
+    <img src="Rectangle 248.png" alt="LMS Siswa">
+    <button class="icon-btn"><i class="fa-solid fa-arrow-right"></i></button>
+    <div class="fitur-content">
+      <h3>LMS Siswa</h3>
+      <p>Pengelolaan belajar dari mana saja dengan fitur Tracking langsung nilainya</p>
+      <a href="#" class="btn-fitur">Coba Sekarang</a>
+    </div>
+  </div>
+
+
+  <div class="fitur-card">
+    <img src="assets-landing-page/Marketplace.png" alt="Marketplace">
+    <button class="icon-btn"><i class="fa-solid fa-arrow-right"></i></button>
+    <div class="fitur-content">
+      <h3>Marketplace</h3>
+      <p>Temukan produk karya siswa dengan sistem jual beli modern</p>
+      <a href="#" class="btn-fitur">Coba Sekarang</a>
+    </div>
+  </div>
+
+  <div class="fitur-card">
+    <img src="assets-landing-page/Rectangle 329.png" alt="Job Fair">
+    <button class="icon-btn"><i class="fa-solid fa-arrow-right"></i></button>
+    <div class="fitur-content">
+      <h3>Job Fair</h3>
+      <p>Koneksi langsung dunia kerja dengan peluang rekrutmen</p>
+      <a href="#" class="btn-fitur">Coba Sekarang</a>
+    </div>
+  </div>
+</section>
+
+<section class="jurusan-section">
+  <div class="jurusan-header">
+    <img src="assets-landing-page/Poster2.png" alt="Jurusan Populer" class="poster-img">
+  </div>
+
+  <div class="jurusan-grid">
+    <!-- ROW 1 -->
+    <div class="row">
+      <div class="jurusan-card">
+        <div class="card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <img src="assets-landing-page/JURUSAN (4).png" alt="Teknik Permesinan">
+        <h3>Teknik Permesinan</h3>
+      </div>
+
+      <div class="jurusan-card active">
+        <div class="card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <img src="assets-landing-page/JURUSAN (1).png" alt="Teknik Instalasi">
+        <h3>Teknik Instalasi Tenaga Listrik</h3>
+      </div>
+
+      <div class="jurusan-card">
+        <div class="card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <img src="assets-landing-page/JURUSAN (3).png" alt="Rekayasa">
+        <h3>Rekayasa Perangkat Lunak</h3>
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="row">
+      <div class="jurusan-card">
+        <div class="card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <img src="assets-landing-page/JURUSAN (2).png" alt="Pengelasan">
+        <h3>Teknik Pengelasan</h3>
+      </div>
+
+      <div class="jurusan-card">
+        <div class="card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <img src="assets-landing-page/JURUSAN (5).png" alt="Logistik">
+        <h3>Teknik Logistik</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="guru-section">
+  <h2 class="guru-title">Guru Inspirasi</h2>
+  <div class="guru-wrapper">
+
+    <!-- Guru Utama -->
+    <div class="guru-main" id="guruMain">
+      <img src="GURU/GURU (1).png" alt="Guru Utama" id="guruMainImg">
+      <div class="guru-info">
+        <h3 id="guruMainName">Rusmini S.Kom M.Kom</h3>
+        <p id="guruMainRole">Kepala Jurusan RPL</p>
+      </div>
+    </div>
+
+    <!-- Guru Lain -->
+    <div class="guru-grid">
+      <div class="guru-card" data-name="Rusmini S.Kom M.Kom" data-role="Kepala Jurusan RPL" data-img="GURU/GURU (1).png">
+        <img src="GURU/GURU (1).png" alt="">
+      </div>
+      <div class="guru-card" data-name="Budi Santoso M.Pd" data-role="Guru RPL" data-img="GURU/GURU (2).png">
+        <img src="GURU/GURU (2).png" alt="">
+      </div>
+      <div class="guru-card" data-name="Siti Aminah S.Pd" data-role="Guru Matematika" data-img="GURU/GURU (3).png">
+        <img src="GURU/GURU (3).png" alt="">
+      </div>
+      <div class="guru-card" data-name="Andi Saputra M.Kom" data-role="Guru Jaringan" data-img="GURU/GURU (4).png">
+        <img src="GURU/GURU (4).png" alt="">
+      </div>
+      <div class="guru-card" data-name="Dewi Lestari S.Pd" data-role="Guru Basis Data" data-img="GURU/GURU (5).png">
+        <img src="GURU/GURU (5).png" alt="">
+      </div>
+      <div class="guru-card" data-name="Agus Prasetyo M.Pd" data-role="Guru Produktif" data-img="GURU/GURU (6).png">
+        <img src="GURU/GURU (6).png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="profile-section">
+  <h2 class="profile-title">Profile Sekolah</h2>
+
+  <!-- Wave Background -->
+  <div class="wave-bg">
+    <img src="assets-landing-page/Vector.png" alt="Wave 1" class="wave wave1">
+    <img src="assets-landing-page/Vector (1).png" alt="Wave 2" class="wave wave2">
+  </div>
+
+  <!-- Video Thumbnail -->
+<div class="video-container">
+  <div class="video-wrapper">
+    <img src="assets-landing-page/tumblail.png" alt="Profile Sekolah" class="video-thumbnail">
+    <div class="play-btn">▶</div>
+  </div>
+</div>
+
+</section>
+
+
+<section class="faq-section">
+  <h2 class="faq-title">Pertanyaan <span>Yang Sering</span> Ditanyakan</h2>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span class="faq-number">01</span>
+      <span class="faq-text">Apa keunggulan atau prestasi unggulan dari SMK Krian 1?</span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      SMK Krian 1 dikenal aktif dalam berbagai lomba kejuruan seperti LKS, 
+      serta memiliki alumni yang bekerja di perusahaan besar maupun melanjutkan 
+      ke perguruan tinggi ternama.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span class="faq-number">02</span>
+      <span class="faq-text">Bagaimana cara menghubungi pihak sekolah?</span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      Anda dapat menghubungi pihak sekolah melalui nomor telepon resmi, 
+      email, atau datang langsung ke kantor tata usaha di jam kerja.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span class="faq-number">03</span>
+      <span class="faq-text">Apa saja kegiatan ekstrakurikuler yang tersedia?</span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      Terdapat berbagai kegiatan ekstrakurikuler seperti Pramuka, Paskibra, 
+      Olahraga, Musik, Jurnalistik, dan lain-lain untuk mengembangkan minat 
+      serta bakat siswa.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span class="faq-number">04</span>
+      <span class="faq-text">Bagaimana cara mendaftar ke SMK Krian 1 Sidoarjo?</span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      Pendaftaran dilakukan secara online melalui website resmi sekolah atau 
+      datang langsung ke sekolah sesuai jadwal penerimaan siswa baru.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span class="faq-number">05</span>
+      <span class="faq-text">Bagaimana fasilitas yang tersedia di sekolah?</span>
+      <span class="faq-toggle">+</span>
+    </div>
+    <div class="faq-answer">
+      Sekolah memiliki ruang kelas ber-AC, laboratorium lengkap, ruang praktik 
+      kejuruan modern, perpustakaan, serta lapangan olahraga yang memadai.
+    </div>
+  </div>
+</section>
+
+<section class="alumni-section">
+  <h2 class="alumni-title">Apa <span>Kata</span> Alumni</h2>
+  <p class="alumni-subtitle">Lihat Bagaimana Testimoni Alumni Smk Krian 1 Yang Sekarang 
+    Lulus Dan Sudah Bekerja Atau Berkuliah</p>
+
+  <!-- Row 1 -->
+  <div class="alumni-row row-1">
+    <div class="alumni-track">
+      <div class="alumni-card">
+        <img src="anomali.png" alt="alumni" />
+        <h4>Sapa Jarwo Udin</h4>
+        <p>Teknik Logistik</p>
+        <small>“Selamat atas kerja keras dan dedikasi Anda!”</small>
+      </div>
+      <div class="alumni-card">
+        <img src="anomali.png" alt="alumni" />
+        <h4>Sukinanda</h4>
+        <p>Rekayasa Perangkat Lunak</p>
+        <small>“Hasilnya luar biasa dan sangat menginspirasi.”</small>
+      </div>
+      <div class="alumni-card">
+        <img src="anomali.png" alt="alumni" />
+        <h4>Rofik Alam</h4>
+        <p>Teknik Permesinan</p>
+        <small>“Perjuanganmu membuahkan hasil terbaik.”</small>
+      </div>
+      <!-- duplicate biar loop -->
+      <div class="alumni-card">
+        <img src="anomali.png" alt="alumni" />
+        <h4>Sapa Jarwo Udin</h4>
+        <p>Teknik Logistik</p>
+        <small>“Selamat atas kerja keras dan dedikasi Anda!”</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="alumni-row row-2">
+    <div class="alumni-track">
+      <div class="alumni-card">
+        <img src="assets-landing-page/anomali.png" alt="alumni" />
+        <h4>Udayana</h4>
+        <p>Teknik Permesinan</p>
+        <small>“Konsistensi adalah kunci keberhasilan.”</small>
+      </div>
+      <div class="alumni-card">
+        <img src="assets-landing-page/anomali.png" alt="alumni" />
+        <h4>Joko Anwar</h4>
+        <p>Teknik Listrik</p>
+        <small>“Hasil luar biasa dan menginspirasi banyak orang.”</small>
+      </div>
+      <div class="alumni-card">
+        <img src="assets-landing-page/anomali.png" alt="alumni" />
+        <h4>Bambang Sutjep</h4>
+        <p>RPL</p>
+        <small>“Kerja kerasmu menjadi teladan.”</small>
+      </div>
+      <!-- duplicate biar loop -->
+      <div class="alumni-card">
+        <img src="assets-landing-page/anomali.png" alt="alumni" />
+        <h4>Udayana</h4>
+        <p>Teknik Permesinan</p>
+        <small>“Konsistensi adalah kunci keberhasilan.”</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            
+            mobileMenu.classList.toggle('active');
+            mobileMenuOverlay.classList.toggle('active');
+        }
+
+        // Toggle submenu in mobile
+        function toggleSubmenu(element) {
+            const submenu = element.nextElementSibling;
+            const chevron = element.querySelector('.chevron');
+            
+            // Close other open submenus
+            const allSubmenus = document.querySelectorAll('.mobile-nav-submenu');
+            const allChevrons = document.querySelectorAll('.mobile-nav-item .chevron');
+            const allItems = document.querySelectorAll('.mobile-nav-item');
+            
+            allSubmenus.forEach(sub => {
+                if (sub !== submenu) {
+                    sub.classList.remove('expanded');
+                }
+            });
+            
+            allChevrons.forEach(chev => {
+                if (chev !== chevron) {
+                    chev.parentElement.classList.remove('expanded');
+                }
+            });
+            
+            // Toggle current submenu
+            submenu.classList.toggle('expanded');
+            element.classList.toggle('expanded');
+        }
+
+        // Handle user click in mobile sidebar
+        function handleUserClick() {
+            alert('User profile clicked! Di sini bisa redirect ke halaman profil user.');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!mobileMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+                document.getElementById('mobileMenuOverlay').classList.remove('active');
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                document.getElementById('mobileMenu').classList.remove('active');
+                document.getElementById('mobileMenuOverlay').classList.remove('active');
+            }
+        });
+
+        // Navbar scroll effect
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const navbar = document.getElementById('navbar');
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                navbar.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrollTop;
+        });
+
+  const guruCards = document.querySelectorAll('.guru-card');
+const guruMain = document.getElementById('guruMain');
+const mainImg = document.getElementById('guruMainImg');
+const mainName = document.getElementById('guruMainName');
+const mainRole = document.getElementById('guruMainRole');
+
+guruCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const img = card.getAttribute('data-img');
+    const name = card.getAttribute('data-name');
+    const role = card.getAttribute('data-role');
+
+    // animasi fade-out
+    guruMain.classList.add('fade');
+    setTimeout(() => {
+      mainImg.src = img;
+      mainName.textContent = name;
+      mainRole.textContent = role;
+      
+      guruMain.classList.remove('fade'); // fade-in lagi
+      guruMain.classList.add('active');
+
+      setTimeout(() => guruMain.classList.remove('active'), 500);
+    }, 300);
+  });
+});
+
+
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  const answer = item.querySelector('.faq-answer');
+  const toggle = item.querySelector('.faq-toggle');
+
+  question.addEventListener('click', () => {
+    const isActive = answer.classList.contains('active');
+
+    // Tutup semua dulu
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('active'));
+    document.querySelectorAll('.faq-toggle').forEach(t => t.classList.remove('active'));
+
+    // Kalau sebelumnya tidak aktif, buka yang diklik
+    if (!isActive) {
+      answer.classList.add('active');
+      toggle.classList.add('active');
+    }
+  });
+});
+
+    </script>
+</body>
+</html>
+
